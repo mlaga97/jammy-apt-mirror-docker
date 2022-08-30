@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  server:
+    image: httpd:2.4-alpine
+    volumes:
+      - ./data:/var/spool/apt-mirror
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    ports:
+      - "80:80"
+  client:
+    image: ubuntu:jammy
+    volumes:
+      - ./data:/var/spool/apt-mirror
+      - ./mirror.list:/etc/apt/mirror.list
