@@ -8,7 +8,7 @@ services:
     ports:
       - "80:80"
   client:
-    image: ubuntu:jammy
+    build: .
     volumes:
       - ./data:/var/spool/apt-mirror
       - ./mirror.list:/etc/apt/mirror.list
