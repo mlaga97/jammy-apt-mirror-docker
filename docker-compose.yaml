@@ -2,6 +2,7 @@ version: "3.9"
 services:
   server:
     image: httpd:2.4-alpine
+    restart: always
     volumes:
       - ./data:/var/spool/apt-mirror
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
@@ -12,3 +13,5 @@ services:
     volumes:
       - ./data:/var/spool/apt-mirror
       - ./mirror.list:/etc/apt/mirror.list
+    profiles:
+      - update

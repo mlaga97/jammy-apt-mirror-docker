@@ -1,1 +1,1 @@
-docker compose run client
+docker compose run --rm client
