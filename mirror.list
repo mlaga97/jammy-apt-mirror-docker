@@ -39,3 +39,6 @@ clean http://us.archive.ubuntu.com/ubuntu
 # Extra Repos (jammy)
 
 deb http://download.docker.com/linux/ubuntu jammy stable
+
+deb http://dl.winehq.org/wine-builds/ubuntu jammy main
+deb-i386 http://dl.winehq.org/wine-builds/ubuntu jammy main
